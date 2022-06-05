@@ -1,7 +1,124 @@
-body  {
-    /* background-image: ("../images/travel.jpg"); */
+body, html {
+    background-image: url("../images/travel.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-color: azure;
+    background-repeat: no-repeat;
+    /* background-color: azure; */
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 24px;
+    height: 100%;
     
 }
+
+a {
+    text-decoration: none;
+    color: rgba(9, 207, 230, 0.647);
+    font-weight: bold;
+    transition: color .1s;
+  }
+
+  a:hover  {
+      color: rosybrown;
+  }
+
+  btn {
+    background-color: lightgoldenrodyellow;
+    border: 0;
+    padding: 6px 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: rosybrown;
+    transform: translate(0, 0);
+    box-shadow: 2px 2px var(--dark);
+  }
+  
+  .btn-inline {
+    display: inline;
+  }
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
+
+  header h1 {
+    font-size: 1em;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+
+  .hero {
+    padding: 3% 4%;
+    background-color: lightseagreen;
+    color: white;
+  }
+  
+  .hero p {
+    max-width: 75%;
+  }
+  
+  .app-title {
+    font-size: 3rem;
+    background-color: lightblue;
+    color: white;
+    padding: 0 10px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    box-shadow: 6px 5px black;
+  }
+
+  .list-group {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .list-item {
+    margin-bottom: 10px;
+    padding: 1.5%;
+    border-radius: var(--border-radius);
+    background-color: var(--light-dark);
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .list-item:hover {
+    background-color: var(--dark);
+  }
+
+
+
+
+
+
+
+  footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
+  
