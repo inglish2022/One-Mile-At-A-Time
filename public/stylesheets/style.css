@@ -1,5 +1,5 @@
 body, html {
-    background-image: url("../images/travel.jpg");
+    background-image: url("../stylesheets/images/travel.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ body, html {
 
 a {
     text-decoration: none;
-    color: rgba(9, 207, 230, 0.647);
+    color: rgb(51, 44, 29);
     font-weight: bold;
     transition: color .1s;
   }
@@ -70,11 +70,15 @@ a {
     padding: 2% 4%;
   }
 
-  .hero {
+  /* .hero {
     padding: 3% 4%;
-    background-color: lightseagreen;
+    background-color: rgb(138, 190, 187);
+    background-image: url('../stylesheets/images/airplane.jpg');
+    background-size: cover;
     color: white;
-  }
+    height: 200px; 
+    width: 200px;
+  } */
   
   .hero p {
     max-width: 75%;
