@@ -42,7 +42,7 @@ router.get('/:id', withAuth, (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'title', 'content', 'dateCreated', 'user_id'],
+        attributes: ['id', 'title', 'content', 'created_at', 'user_id'],
         include: [
             {
                 model: User,
@@ -78,7 +78,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         content: req.body.content,
-        user_id: req.body.user_id
+        user_id: req.body.userId
     })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
