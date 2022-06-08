@@ -15,9 +15,9 @@ A screenshot that shows the full generated web page:
 
 ## Credits 
 
-Inglish2022 - Contributer/
+Inglish2022 - Contributer
 
-Mhiss11- Contributer/
+Mhiss11- Contributer
 
 NoalnDC5 - Contributor 
 
