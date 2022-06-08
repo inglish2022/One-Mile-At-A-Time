@@ -68,7 +68,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
 })
 router.get('/new', (req, res) => {
-    res.render('add-post');
+    res.render('post-info');
 });
 
 
