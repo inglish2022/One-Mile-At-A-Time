@@ -3,7 +3,7 @@
       <div class="card-header flex-row justify-space-between"></div>
     <h2>{{post.title}}</h2>
     <div>
-        Posted by {{post.User.username}} on {{format_date createdAt}}
+        Posted by {{post.User.username}} on {{format_date created_at}}
       </div>
     </div>
     <div class="card-body">
@@ -24,7 +24,7 @@
               {{body}}
             </p>
             <p>
-              &mdash; {{User.username}}, {{format_date createdAt}}
+              &mdash; {{User.username}}, {{format_date created_at}}
             </p>
           </div>
         {{/each}}
