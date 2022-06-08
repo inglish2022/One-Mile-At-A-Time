@@ -1,7 +1,8 @@
 # One-Mile-At-A-Time
+*Travel Blog
 
 
-LINK HERE
+**LINK HERE**
 
 
 
@@ -21,5 +22,4 @@ A screenshot that shows the full generated web page:
 
 **License**
 This is a project done under a bootcamp program, it is public but please contact the publisher before you use or change any content.
-ghibli.github@gmail.com
 
