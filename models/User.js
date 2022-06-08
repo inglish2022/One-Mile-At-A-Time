@@ -35,13 +35,13 @@ User.init(
   {
     hooks: {
       // set up beforeCreate lifecycle "hook" functionality
-      beforeCreate: async (newUserData) => {
+      async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
 
       },
       // set up beforeUpdate lifecycle "hook" functionality
-      beforeUpdate: async (updatedUserData) => {
+      async beforeUpdate(updatedUserData)  {
         updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
         return updatedUserData;
       }

@@ -5,7 +5,7 @@ async function editPostHandler(event) {
     const post = document.getElementById('post-id')
 
     fetch("/api/post/" + postId.value, {
-        method: "put", 
+        method: "PUT", 
         body: JSON.stringify({
             title: title.value,
             body: body.value
@@ -18,4 +18,4 @@ async function editPostHandler(event) {
         .catch(err => console.log(err))
   }
   
-  document.querySelector('.edit-post-form').addEventListener('submit', editPostHandler);
+  document.querySelector('#edit-post-form').addEventListener('submit', editPostHandler);

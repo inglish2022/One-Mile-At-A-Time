@@ -27,8 +27,9 @@ router.get('/:id', withAuth, (req, res) => {
 router.post('/', withAuth, (req, res) => {
     //check the session
     Comment.create({
-        ...req.body,
-        user_id: req.session.userId
+        comment_text: req.body.comment_text,
+        user_id: req.session.userId,
+        post_id: req.body.post_id
     })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {

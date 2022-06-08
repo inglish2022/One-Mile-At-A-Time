@@ -7,17 +7,22 @@ async function loginFormHandler(event) {
 
     if (username && password) {
         const response = await fetch('/api/user/login', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 username,
                 password
             }),
             headers: { 'Content-Type': 'application/json' }
         })
-        .then(function() {
-            document.location.replace('/dashboard');
-    })
-    .catch(err => console.log(err));
+    //     .then(function() {
+    //         document.location.replace('/dashboard');
+    // })
+    // .catch(err => console.log(err));
+    if (response.ok) {
+        document.location.replace('./dashboard');
+    } else {
+        alert(response.statusText)
+    }
 
 };
 
