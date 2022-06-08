@@ -28,7 +28,6 @@ Noaln - Contributor
 
 
 
-
-**License**
+# License
 This is a project done under a bootcamp program, it is public but please contact the publisher before you use or change any content.
 
