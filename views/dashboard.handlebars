@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
+<body> --}}
   {{!-- <nav class="navbar">
     <ul class="flex-row">
       <a class="link" href="/">Home</a>
@@ -16,11 +16,11 @@
       <a class="link" href="#" id="logout-link">Logout</a>
     </ul>
   </nav> --}}
-  <header class="hero">
+  {{!-- <header class="hero">
     <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
-  </header>
+  </header> --}}
 
-  <main class="col-auto">
+  {{!-- <main class="col-auto">
     {{{body}}}
   </main>
 
@@ -33,4 +33,36 @@
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 
-</html>
+</html> --}}
+
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="form-label" for "content">Content</label>
+      <input id="content" name="content" class="form-input" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
