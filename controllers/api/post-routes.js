@@ -51,7 +51,8 @@ router.get('/:id', withAuth, (req, res) => {
             'title',
             'content',
             'created_at',
-            'user_id'],
+            'user_id'
+        ],
         include: [
             {
                 model: User,
@@ -84,6 +85,9 @@ router.get('/:id', withAuth, (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
     // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+    console.log('+++++++++++++++++++')
+    console.log(req.body)
+    console.log('+++++++++++++++++++')
     Post.create({
         title: req.body.title,
         content: req.body.content,

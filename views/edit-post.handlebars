@@ -10,7 +10,7 @@
     <input type="text" id="post-title" value="{{post.title}}" class="form-input" />
 
     <label class="form-label" for="post-body">Content</label>
-    <textarea id="post-body" class="form-input">{{post.body}}</textarea>
+    <textarea id="post-content" class="form-input">{{post.content}}</textarea>
 
     <button type="submit" class="btn">Update</button>
 
@@ -19,6 +19,20 @@
 
 
 </article>
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+
+{{> comments post.comments}}
+
+
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>

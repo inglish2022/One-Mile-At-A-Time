@@ -1,9 +1,9 @@
 async function deletePostHandler(event) {
     event.preventDefault();
     
-const post_id = document.getElementById('post_id')
+const post_id = document.getElementById('post-id').value
 
-    fetch("/api/post/" + post_id.value, {
+    fetch("/api/post/" + post_id, {
         method: "DELETE"
     })
     .then(function() {

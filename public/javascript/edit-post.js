@@ -1,20 +1,21 @@
 async function editPostHandler(event) {
     event.preventDefault();
-    const title = document.getElementById('post-title');
-    // const body = document.getElementById('post-body');
-    const post_id = window.location.toString().split('/')[
-        window.location.toString().split('/').length - 1
-    ];
+    const title = document.getElementById('post-title').value;
+    const content = document.getElementById('post-content').value;
+    const post_id = document.getElementById('post-id').value
 
-    const response = await fetch("/api/post" + post_id.value, {
+    console.log(title, content, post_id)
+
+    const response = await fetch("/api/post" + post_id, {
         method: "PUT",
         body: JSON.stringify({
-            title
+            title,
+            content
         }),
         headers: { "Content-Type": "application/json" }
     });
     if (response.ok) {
-        document.location.replace('/dashboard/');
+        document.location.replace('/dashboard');
     } else {
         alert(response.statusText);
     }

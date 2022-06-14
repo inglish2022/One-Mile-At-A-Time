@@ -10,19 +10,20 @@
 
 <body>
   <div class="wrapper">
-    <header class="hero">
-        <div>
-            <nav class= "nav">
-                    <a class="link" href="/">Home</a>
-                    <a class="link" href="/dashboard">Dashboard</a>
-                    {{#if loggedIn}}
-                    <a class="link" href="/" id="logout">Logout</a>
-                    {{else}}
-                    <a class="link" href="/login">Login</a>
-                    {{/if}}
-                </nav> 
-        </div>
-      <h1 class="app-title"><i class="fab"></i>One Mile At A Time</h1>
+    <header>
+      <hi>
+        <hi class="app-title">
+          <a href="/">One Mile At A Time</a>
+        </hi>
+
+        <nav>
+          {{#if loggedIn}}
+          <a href="/dashboard">dashboard</a>
+          <button id="logout" class="btn-no-style">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
     </header>
 
     <main>
@@ -30,11 +31,11 @@
     </main>
   </div>
 
-  
-  
-    <footer>
-      Thanks for visiting!
-    </footer>
+
+
+  <footer>
+    Thanks for visiting!
+  </footer>
   </div>
 
   <script src="/javascript/logout.js"></script>
