@@ -17,6 +17,7 @@ a {
     color: rgb(51, 44, 29);
     font-weight: bold;
     transition: color .1s;
+    font-size: larger;
   }
 
   a:hover  {
@@ -80,9 +81,9 @@ a {
     width: 200px;
   } */
   
-  .hero p {
+  /* .hero p {
     max-width: 75%;
-  }
+  } */
   
   .app-title {
     font-size: 3rem;
@@ -93,6 +94,13 @@ a {
     border-radius: var(--border-radius);
     box-shadow: 6px 5px black;
   }
+
+  article  {
+    border: double azure;
+    padding:5%;
+  }
+
+  
 
   .list-group {
     padding: 0;
@@ -110,6 +118,30 @@ a {
   
   .list-item:hover {
     background-color: var(--dark);
+  }
+
+  #delete-btn {
+    background-color: black;
+    color:white;
+  }
+  
+  #delete-btn:hover {
+    background-color: red;
+  }
+
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .comment:nth-child(odd) {
+    background-color:azure;
+  }
+  
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
   }
 
 
