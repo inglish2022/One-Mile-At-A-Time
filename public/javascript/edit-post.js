@@ -6,7 +6,7 @@ async function editPostHandler(event) {
 
     console.log(title, content, post_id)
 
-    const response = await fetch("/api/post" + post_id, {
+    const response = await fetch("/api/post/" + post_id, {
         method: "PUT",
         body: JSON.stringify({
             title,

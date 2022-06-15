@@ -8,22 +8,25 @@ router.get("/", (req, res) => {
         include: [{
             model: Comment,
             attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-                    include: {
-                        model: User,
-                        attributes: ['username']
-                    }
-                },
-                {
-                    model: User,
-                    attributes: ['username']
-                }
-            ]
-        })
-        
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        },
+        {
+            model: User,
+            attributes: ['username']
+        }
+        ]
+    })
+
         .then((dbPostData) => {
             const posts = dbPostData.map((post) => post.get({ plain: true }));
 
-            res.render("homepage", { posts });
+            res.render("homepage", {
+                posts,
+                loggedIn: req.session.loggedIn
+            });
         })
         .catch((err) => {
             res.status(500).json(err);
@@ -39,7 +42,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
-    if (req.session.loggedIn)  {
+    if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
