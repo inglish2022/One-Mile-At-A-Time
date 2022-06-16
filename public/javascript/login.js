@@ -12,10 +12,7 @@ async function loginFormHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         })
-    //     .then(function() {
-    //         document.location.replace(‘/dashboard’);
-    // })
-    // .catch(err => console.log(err));
+    
     if (response.ok)  {
         document.location.replace('/dashboard');
     } else {
