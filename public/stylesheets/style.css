@@ -71,19 +71,7 @@ a {
     padding: 2% 4%;
   }
 
-  /* .hero {
-    padding: 3% 4%;
-    background-color: rgb(138, 190, 187);
-    background-image: url('../stylesheets/images/airplane.jpg');
-    background-size: cover;
-    color: white;
-    height: 200px; 
-    width: 200px;
-  } */
-  
-  /* .hero p {
-    max-width: 75%;
-  } */
+
   
   .app-title {
     font-size: 3rem;
@@ -92,7 +80,8 @@ a {
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px black;
+    box-shadow: 6px 5px pink;
+    font-family: cursive;
   }
 
   article  {
@@ -156,5 +145,6 @@ a {
     justify-content: center;
     padding: 1%;
     font-size: 110%;
+    font-family: cursive;
   }
   
